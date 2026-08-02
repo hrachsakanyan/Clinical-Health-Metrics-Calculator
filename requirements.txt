@@ -1,0 +1,10 @@
+# Optional runtime dependency for colored terminal output.
+# VitalScope runs fine without it — if colorama is missing, the CLI
+# automatically falls back to plain (uncolored) text.
+colorama>=0.4.6
+
+# For running the test suite you may optionally use pytest:
+#   pytest>=7.0
+#
+# The tests also run with the built-in unittest module:
+#   python -m unittest discover -s tests

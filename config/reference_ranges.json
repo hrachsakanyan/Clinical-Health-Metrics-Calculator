@@ -1,0 +1,20 @@
+{
+  "_comment": "Reference ranges for VitalScope. Each entry is [bound, label]. For BMI the bound is an EXCLUSIVE upper limit (use \"inf\" for the open-ended top category). For CrCl the bound is an INCLUSIVE lower limit. Edit these to localize thresholds; invalid files fall back to built-in defaults.",
+  "bmi_categories": [
+    [16.0, "Severe thinness"],
+    [17.0, "Moderate thinness"],
+    [18.5, "Mild thinness"],
+    [25.0, "Normal weight"],
+    [30.0, "Overweight"],
+    [35.0, "Obese (Class I)"],
+    [40.0, "Obese (Class II)"],
+    ["inf", "Obese (Class III)"]
+  ],
+  "crcl_stages": [
+    [90.0, "Normal / high kidney function"],
+    [60.0, "Mildly reduced kidney function"],
+    [30.0, "Moderately reduced kidney function"],
+    [15.0, "Severely reduced kidney function"],
+    [0.0, "Kidney failure"]
+  ]
+}
