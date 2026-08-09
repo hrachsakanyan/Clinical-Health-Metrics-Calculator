@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🩺 VitalScope
 
 ### Clinical Health Metrics Calculator
@@ -8,13 +6,6 @@ A clean, menu-driven **command-line tool** that computes five core clinical
 health metrics from basic body measurements — with input validation,
 severity-based categories, and short interpretations.
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/tests-33%20passing-brightgreen)](tests/)
-[![Dependencies](https://img.shields.io/badge/dependencies-stdlib%20only-blue)](requirements.txt)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey)](#-license)
-
-</div>
-
 > [!WARNING]
 > **Educational project only.** VitalScope is **not a medical device** and must
 > **not** be used for diagnosis, treatment, or any clinical decision-making.
@@ -22,35 +13,35 @@ severity-based categories, and short interpretations.
 
 ---
 
-## 📑 Table of Contents
+## 📚 Table of Contents
 
-- [Features](#-features)
-- [Medical Formulas](#-medical-formulas)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Configuration](#️-configuration)
-- [Project Structure](#-project-structure)
-- [Running the Tests](#-running-the-tests)
-- [License](#-license)
+* [✨ Features](#-features)
+* [🧬 Medical Formulas](#-medical-formulas)
+* [📦 Installation](#-installation)
+* [🚀 Usage](#-usage)
+* [⚙️ Configuration](#️-configuration)
+* [🗂️ Project Structure](#-project-structure)
+* [🧪 Running the Tests](#-running-the-tests)
+* [📄 License](#-license)
 
 ---
 
 ## ✨ Features
 
-| | Feature |
-|---|---|
-| 📋 | **Menu-based CLI** — pick the calculation you want |
-| 🧮 | **Five calculators** in one program (BMI, BSA, BMR, IBW, CrCl) |
-| ✅ | **Robust input validation** — numbers, ranges, and choices are checked |
-| 🏷️ | **Categorized output** with a short interpretation |
-| 📏 | **Metric & Imperial units** — switch any time with `u` |
-| 🎨 | **Colored output** — green = normal, yellow = borderline, red = abnormal |
-| 🧾 | **Session summary** printed on exit |
-| 💾 | **Export a `.txt` report** — timestamped, saved to `reports/` |
-| ⚙️ | **Configurable reference ranges** via a simple JSON file |
-| 🗂️ | **Persistent history** — calculations survive across runs (JSONL) |
+|     | Feature                                                                  |
+| --- | ------------------------------------------------------------------------ |
+| 🎛️ | **Menu-based CLI** — pick the calculation you want                       |
+| 🧮  | **Five calculators** in one program (BMI, BSA, BMR, IBW, CrCl)           |
+| 🛡️ | **Robust input validation** — numbers, ranges, and choices are checked   |
+| 🏷️ | **Categorized output** with a short interpretation                       |
+| 📐  | **Metric & Imperial units** — switch any time with `u`                   |
+| 🌈  | **Colored output** — green = normal, yellow = borderline, red = abnormal |
+| 📋  | **Session summary** printed on exit                                      |
+| 💾  | **Export a** **`.txt`** **report** — timestamped, saved to `reports/`    |
+| ⚙️  | **Configurable reference ranges** via a simple JSON file                 |
+| 🗃️ | **Persistent history** — calculations survive across runs (JSONL)        |
 
-> 🎨 Colors use [`colorama`](https://pypi.org/project/colorama/) when installed
+> 🌈 Colors use [`colorama`](https://pypi.org/project/colorama/) when installed
 > and **fall back to plain text automatically** when it isn't — so the tool has
 > **zero required dependencies**.
 
@@ -58,15 +49,15 @@ severity-based categories, and short interpretations.
 
 ## 🧬 Medical Formulas
 
-| Metric | Formula | Reference |
-|--------|---------|-----------|
-| **BMI** — Body Mass Index | `weight(kg) / height(m)²` | WHO BMI classification |
-| **BSA** — Body Surface Area | `√((height_cm × weight_kg) / 3600)` | Mosteller RD, *N Engl J Med* 1987 |
-| **BMR** — Basal Metabolic Rate | `10·kg + 6.25·cm − 5·age (+5 ♂ / −161 ♀)` | Mifflin–St Jeor, *Am J Clin Nutr* 1990 |
-| **IBW** — Ideal Body Weight | `50 / 45.5 kg + 2.3 kg per inch over 60 in` | Devine BJ, 1974 |
-| **CrCl** — Creatinine Clearance | `((140 − age) × kg × sexFactor) / (72 × SCr)` | Cockcroft–Gault, *Nephron* 1976 |
+| Metric                          | Formula                                       | Reference                              |
+| ------------------------------- | --------------------------------------------- | -------------------------------------- |
+| **BMI** — Body Mass Index       | `weight(kg) / height(m)²`                     | WHO BMI classification                 |
+| **BSA** — Body Surface Area     | `√((height_cm × weight_kg) / 3600)`           | Mosteller RD, *N Engl J Med* 1987      |
+| **BMR** — Basal Metabolic Rate  | `10·kg + 6.25·cm − 5·age (+5 ♂ / −161 ♀)`     | Mifflin–St Jeor, *Am J Clin Nutr* 1990 |
+| **IBW** — Ideal Body Weight     | `50 / 45.5 kg + 2.3 kg per inch over 60 in`   | Devine BJ, 1974                        |
+| **CrCl** — Creatinine Clearance | `((140 − age) × kg × sexFactor) / (72 × SCr)` | Cockcroft–Gault, *Nephron* 1976        |
 
-<sub>`sexFactor = 1.0` (male) or `0.85` (female). Serum creatinine (`SCr`) in mg/dL.</sub>
+`sexFactor = 1.0` (male) or `0.85` (female). Serum creatinine (`SCr`) in mg/dL.
 
 ---
 
@@ -89,9 +80,6 @@ pip install -r requirements.txt   # optional: installs colorama for colors
 python src/main.py
 ```
 
-<details open>
-<summary><b>Example session</b></summary>
-
 ```text
 VitalScope CLI — educational use only, not for clinical decisions.
 Units [m = metric, i = imperial]: m
@@ -113,8 +101,6 @@ Height (cm): 175
   Category: Normal weight
 ```
 
-</details>
-
 **Menu shortcuts:** `r` export report · `h` view history · `u` switch units · `q` quit
 
 ---
@@ -122,12 +108,12 @@ Height (cm): 175
 ## ⚙️ Configuration
 
 Reference ranges live in
-[`config/reference_ranges.json`](config/reference_ranges.json).
+`config/reference_ranges.json`.
 Each entry is a `[bound, label]` pair:
 
-- **BMI** — `bound` is the *exclusive upper limit* of the category. Use the
+* **BMI** — `bound` is the *exclusive upper limit* of the category. Use the
   string `"inf"` for the open-ended top category.
-- **CrCl** — `bound` is the *inclusive lower limit* of the stage.
+* **CrCl** — `bound` is the *inclusive lower limit* of the stage.
 
 ```json
 {
@@ -198,7 +184,3 @@ Expected result: **`Ran 33 tests ... OK`** ✅
 
 Released under the **MIT License** for educational purposes.
 See the disclaimer at the top of this file.
-
-<div align="center">
-<sub>Built with Python 🐍 · standard library only</sub>
-</div>
