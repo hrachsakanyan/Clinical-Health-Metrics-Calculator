@@ -13,7 +13,7 @@ severity-based categories, and short interpretations.
 
 ---
 
-## 📚 Table of Contents
+## 📚 Table of Contents 
 
 * [✨ Features](#-features)
 * [🧬 Medical Formulas](#-medical-formulas)
