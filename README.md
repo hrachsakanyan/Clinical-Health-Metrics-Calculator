@@ -105,7 +105,7 @@ Height (cm): 175
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Configuration 
 
 Reference ranges live in
 `config/reference_ranges.json`.
