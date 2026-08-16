@@ -74,7 +74,7 @@ pip install -r requirements.txt   # optional: installs colorama for colors
 
 ---
 
-## 🚀 Usage
+## 🚀 Usage 
 
 ```bash
 python src/main.py
