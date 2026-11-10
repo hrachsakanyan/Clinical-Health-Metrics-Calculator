@@ -1,4 +1,4 @@
-# 🩺 VitalScope 
+# 🩺 VitalScope
 
 ### Clinical Health Metrics Calculator
 
